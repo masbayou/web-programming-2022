@@ -1,0 +1,29 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    width: 18%;
+    height: 8%;
+    margin: 10px;
+    
+}
+
+img {
+    width: 100%;
+    
+}
+
+.box1 {
+    width: 31%;
+    margin: 10px;
+}
+
