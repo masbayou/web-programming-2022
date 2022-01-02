@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="picker.css">
+    <title>Pilih Gambar</title>
+
+</head>
+
+<body>
+
+    <div class="wrapper"> 
+        <div class="container-image">
+            <h1>Image Picker</h1>
+            <div class="select-img">
+                <select name="select_img" id="select_img" onchange="gantiGambar();">
+                    <option id="g1" value="1">Flower</option>
+                    <option id="g2" value="2">Tree</option>
+                    <option id="g3" value="3">Mountain</option>
+                    <option id="g4" value="4">River</option>
+                    <option id="g5" value="5">Waterfall</option>
+                    <option id="g6" value="6">Island</option>
+                </select>
+            </div>
+            <div class="change-img" style="margin-top: 40px;">
+                <img id="imgDefault" src="img/flower.jpg" style="width: 200px;">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function gantiGambar() {
+            var getSelect = document.getElementById('select_img').value;
+
+            var g1 = document.getElementById('g1').value;
+            var g2 = document.getElementById('g2').value;
+            var g3 = document.getElementById('g3').value;
+            var g4 = document.getElementById('g4').value;
+            var g5 = document.getElementById('g5').value;
+            var g6 = document.getElementById('g6').value;
+
+            var imgDefault = document.getElementById('imgDefault');
+
+            if (getSelect == g2) {
+                imgDefault.src = 'img/tree.jpg';
+                alert('this is tree image');
+            }
+            else if (getSelect == g3) {
+                imgDefault.src = 'img/mountain.jpg';
+                alert('this is mountain image');
+            }
+            else if (getSelect == g4) {
+                imgDefault.src = 'img/river.jpg';
+                alert('this is river image');
+            }
+            else if (getSelect == g5) {
+                imgDefault.src = 'img/waterfall.jpg';
+                alert('this is waterfall image');
+            } else if (getSelect == g6) {
+                imgDefault.src = 'img/island.jpg';
+                alert('this is island image');
+            } else {
+                imgDefault.src = 'img/flower.jpg';
+                alert('this is flower image');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

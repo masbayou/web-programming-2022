@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Bayu</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper-login">
+        <div class="container-login">
+            <h1>Login</h1>
+            <div class="login-input">
+                <input type="hidden" value="cek">
+                <div>
+                    <input type="text" name="username" id="username" placeholder="Masukan Nama">
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="Masukan Password">
+                </div>
+                <button class="send-btn" type="submit" value="kirim" onclick="Login();">Masuk</button>
+                <div class="access">
+                    <p>username : bayustwn</p>
+                    <p>password : bayu2212</p>
+                </div>
+                <div id="error">Username / Password anda salah! <span style="margin-left: 20px; cursor: pointer;"
+                        onclick="Close();">&#10005;</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="autentikasi.js"></script>
+
+</body>
+
+</html> 

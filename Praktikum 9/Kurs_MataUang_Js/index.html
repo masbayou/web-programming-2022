@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Kurs</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: arial;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        align-items: center;
+    } 
+
+    table {
+        margin: 0 auto;
+    }
+
+    table tr th {
+        background-color: orange;
+    }
+
+    table tr th,
+    table tr td {
+        padding: 20px;
+        font-size: 20px;
+    }
+</style>
+<body>
+
+    <div class="container">
+        <div class="currecy-box">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Masukan Nilai</th>
+                        <th>Valas</th>
+                        <th>Nilai Rupiah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" name="money_val" id="money_val"></td>
+                        <td>
+                            <select onchange="countMoney();" name="currency_select" id="currency_select">
+                                <option id="currency_default" value="not_select">Not Selected</option>
+                                <option id="currency_1" value="dolar_us">Dollar Us</option>
+                                <option id="currency_2" value="dolar_singapore">Dollar Singapore</option>
+                                <option id="currency_3" value="ringgit_malaysia">Ringgit Malaysia</option>
+                                <option id="currency_4" value="yen_jepang">Yen Jepang</option>
+                                <option id="currency_5" value="euro">Euro</option>
+                                <option id="currency_6" value="riyal_arab">Riyal Arab Saudi</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div id="result">0</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+
+        // if value of option change 
+        function countMoney() {
+            // console.log('changed');
+
+            // get input user 
+            var user_input = document.getElementById('money_val').value;
+         
+
+            // get all value from option
+            var currency_select = document.getElementById('currency_select').value;
+            var currency_default = document.getElementById('currency_default').value;
+
+            var currency_1 = document.getElementById('currency_1').value; 
+            var currency_2 = document.getElementById('currency_2').value; 
+            var currency_3 = document.getElementById('currency_3').value; 
+            var currency_4 = document.getElementById('currency_4').value; 
+            var currency_5 = document.getElementById('currency_5').value; 
+            var currency_6 = document.getElementById('currency_6').value; 
+
+            // set result default is 0 
+            var result = 0;
+
+            if(currency_select == currency_default){
+                result = result;
+
+            }else if (currency_select == currency_1) {
+                result = user_input*14359,75;
+                document.getElementById('result').innerHTML = result;
+
+            } else if(currency_select == currency_2) {
+                result = user_input*10536,17;
+                document.getElementById('result').innerHTML = result;
+
+            } else if (currency_select == currency_3) {
+                // console.log('currency : '+currency_3);
+                result = user_input*3416,96;
+                document.getElementById('result').innerHTML = result;
+
+            } else if (currency_select == currency_4) {
+                result = user_input*126,84;
+                document.getElementById('result').innerHTML = result;
+                
+            } else if (currency_select == currency_5) {
+                result = user_input*16267,01;
+                document.getElementById('result').innerHTML = result;
+                
+            }else {
+                result = user_input*3827,56;
+                document.getElementById('result').innerHTML = result;
+                
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- usd : 14359,75 -->
+<!-- riyal : 3827,56 -->
+
+<!-- euro : 16267,01 -->
+<!-- ringgit : 3416,96 -->
+<!-- singapore : 10536,17 -->
+<!-- yen : 126,84 -->
