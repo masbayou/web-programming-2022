@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+    <script src="BiayaParkir.js"></script>
+</head>
+<body>
+    <h2>Menghitung biaya pakir</h2>
+    <table>
+        <tr>
+            <td>Masukan jam masuk</td>
+            <td>:</td>
+            <td>
+                <input type="text" id="jamMasuk" onchange="hitungBayar()">
+            </td>
+        </tr>
+        <tr>
+            <td>Masukan jam keluar</td>
+            <td>:</td>
+            <td>
+                <input type="text" id="jamKeluar" onchange="hitungBayar()">
+            </td>
+        </tr>
+        <tr>
+            <td>Biaya yang harus dibayar</td>
+            <td>:</td>
+            <td>
+                <input type="text" id="bayar" onchange="hitungBayar()" disabled>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
